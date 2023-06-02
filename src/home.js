@@ -2,10 +2,10 @@ export default function loadHome() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
 
-    const logoText = document.createElement("h2");
-    logoText.classList.add("page-header");
-    logoText.textContent = "Welcome to The Coffee Hut";
-    content.appendChild(logoText);
+    const header = document.createElement("h2");
+    header.classList.add("page-header");
+    header.textContent = "Welcome to The Coffee Hut";
+    content.appendChild(header);
 
     const introduction = document.createElement("p");
     introduction.classList.add("page-text");
