@@ -1,3 +1,5 @@
+import backgroundImage from "./background.jpg";
+
 export default function loadContact() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
@@ -29,9 +31,9 @@ export default function loadContact() {
 
     content.appendChild(contactList)
 
-    const shopImage = document.createElement("img");
-    shopImage.classList.add("page-background");
-    shopImage.setAttribute("src", "https://source.unsplash.com/pNIgH0y3upM/1920x1080");
-    shopImage.setAttribute("alt", "Background");
-    content.appendChild(shopImage);
+    const background = new Image();
+    background.src = backgroundImage;
+    background.classList.add("page-background");
+    background.setAttribute("alt", "Background");
+    content.appendChild(background);
 }
