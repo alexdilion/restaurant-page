@@ -1,3 +1,5 @@
+import backgroundImage from "./background.jpg";
+
 const MENU_ITEMS = {
     Beverages: [
         {name: "Espresso", price: "€2.50"},
@@ -57,4 +59,10 @@ export default function loadMenu() {
 
         content.appendChild(itemsList);
     });
+
+    const background = new Image();
+    background.src = backgroundImage;
+    background.classList.add("page-background");
+    background.setAttribute("alt", "Background");
+    content.appendChild(background);
 }

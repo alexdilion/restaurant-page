@@ -1,6 +1,6 @@
-import loadHome from "../pages/home";
-import loadMenu from "../pages/menu";
-import loadContact from "../pages/contact";
+import loadHome from "../components/home-page/home";
+import loadMenu from "../components/menu-page/menu";
+import loadContact from "../components/contact-page/contact";
 
 export default function pageLoad(page) {
     if (page === "home") {
