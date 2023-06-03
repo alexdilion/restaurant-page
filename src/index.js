@@ -1,3 +1,4 @@
-import pageLoad from "./pageLoad";
+import initialLoad from "./modules/initialLoad"
+import pageLoad from "./modules/pageLoad";
 
-pageLoad();
+initialLoad();
