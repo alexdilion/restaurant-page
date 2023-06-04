@@ -17,6 +17,8 @@ export default function loadHome() {
 
     const background = new Image();
     background.src = backgroundImage;
+    background.setAttribute("height", "720px");
+    background.setAttribute("width", "1280px");
     background.classList.add("page-background");
     background.setAttribute("alt", "Background");
     content.appendChild(background);

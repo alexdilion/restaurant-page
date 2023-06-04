@@ -1,0 +1,61 @@
+:root {
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    min-height: 100vh;
+
+    display: grid;
+    grid-template: 1fr max-content max-content / minmax(1.5rem, 1fr) auto minmax(1.5rem, 1fr);
+    grid-template-areas:
+        "lside navbar rside"
+        "lside main-content rside"
+        "lside footer rside";
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    grid-area: navbar;
+    align-items: center;
+}
+
+#content {
+    grid-area: main-content;
+    max-width: 1200px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.fancy-font {
+    font-family: "Pacifico", cursive;
+}
+
+.nav-tabs {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2rem;
+}
+
+.page-tab {
+    font-size: 1.25rem;
+}
+
+.page-background {
+    width: 100%;
+}

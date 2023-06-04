@@ -35,5 +35,7 @@ export default function loadContact() {
     background.src = backgroundImage;
     background.classList.add("page-background");
     background.setAttribute("alt", "Background");
+    background.setAttribute("height", "720px");
+    background.setAttribute("width", "1280px");
     content.appendChild(background);
 }
