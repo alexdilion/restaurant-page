@@ -3,6 +3,13 @@
     --accent: #7F5539;
 }
 
+@media screen and (min-width: calc(3rem + 1200px)) {
+    .navbar,
+    #content {
+        width: 1200px
+    }
+}
+
 * {
     box-sizing: border-box;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -15,7 +22,7 @@ body {
     min-height: 100vh;
 
     display: grid;
-    grid-template: 1fr max-content max-content / minmax(1.5rem, 1fr) auto minmax(1.5rem, 1fr);
+    grid-template: max-content 1fr max-content / minmax(1.5rem, 1fr) auto minmax(1.5rem, 1fr);
     grid-template-areas:
         "lside navbar rside"
         "lside main-content rside"
@@ -23,6 +30,7 @@ body {
 }
 
 .navbar {
+    margin-top: .5rem;
     display: flex;
     justify-content: space-between;
     grid-area: navbar;
@@ -31,7 +39,6 @@ body {
 
 #content {
     grid-area: main-content;
-    max-width: 1200px;
 }
 
 footer {
