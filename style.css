@@ -1,5 +1,6 @@
 :root {
     --text-color: #333;
+    --accent: #7F5539;
 }
 
 * {
@@ -58,4 +59,19 @@ footer {
 
 .page-background {
     width: 100%;
+}
+
+.page-tab a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.accent-text {
+    font-family: inherit;
+    color: var(--accent);
+}
+
+.selected-tab {
+    color: var(--accent);
+    font-weight: 900;
 }
