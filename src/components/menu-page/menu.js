@@ -48,7 +48,12 @@ export default function loadMenu() {
 
     Object.keys(MENU_ITEMS).forEach((itemType) => {
         const itemsList = document.createElement("ul");
-        itemsList.id = `${itemType.toLowerCase()}-list`;
+        itemsList.id = `${itemType.toLowerCase().split(" ")[0]}-list`;
+
+        const listHeader = document.createElement("h3");
+        listHeader.textContent = itemType;
+        listHeader.classList.add("list-header");
+        content.appendChild(listHeader);
 
         MENU_ITEMS[itemType].forEach((item) => {
             const itemElement = document.createElement("li");
