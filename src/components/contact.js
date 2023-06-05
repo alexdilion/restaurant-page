@@ -1,5 +1,3 @@
-import backgroundImage from "./background.jpg";
-
 export default function loadContact() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
@@ -30,6 +28,4 @@ export default function loadContact() {
     contactList.appendChild(addressInfo)
 
     content.appendChild(contactList)
-
-    document.querySelector(".page-background").style.backgroundImage = `url(${backgroundImage})`;
 }

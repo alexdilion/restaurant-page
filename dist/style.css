@@ -42,7 +42,7 @@ body {
     width: 100vw;
 
     filter: brightness(30%);
-    transition: filter 1s cubic-bezier(0.39, 0.58, 0.12, 1.03);
+    transition: filter .6s ease-in-out;
 }
 
 .page-background {

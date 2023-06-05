@@ -1,8 +1,9 @@
 import initialLoad from "./modules/initialLoad";
 import pageLoad from "./modules/pageLoad";
+import backgroundLoad from "./modules/backgroundLoad";
 
 const PAGE_TABS = document.querySelectorAll(".page-tab a");
-const BACKGROUND_WRAPPER = document.querySelector(".background-wrapper")
+const BACKGROUND_WRAPPER = document.querySelector(".background-wrapper");
 let currentTab = "home";
 
 function styleTab(selected) {
@@ -23,13 +24,19 @@ function switchTab(e) {
 
     if (currentTab === tab) return;
 
-    styleTab(tab)
+    BACKGROUND_WRAPPER.classList.add("fade-out");
+    styleTab(tab);
     pageLoad(tab);
     currentTab = tab;
 }
 
 PAGE_TABS.forEach((link) => {
     link.addEventListener("click", switchTab);
+});
+
+BACKGROUND_WRAPPER.addEventListener("transitionend", () => {
+    backgroundLoad(currentTab);
+    BACKGROUND_WRAPPER.classList.remove("fade-out");
 });
 
 initialLoad();

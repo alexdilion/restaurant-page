@@ -1,5 +1,3 @@
-import backgroundImage from "./background.jpg";
-
 const MENU_ITEMS = {
     Beverages: [
         {name: "Espresso", price: "€2.50"},
@@ -64,6 +62,4 @@ export default function loadMenu() {
 
         content.appendChild(itemsList);
     });
-
-    document.querySelector(".page-background").style.backgroundImage = `url(${backgroundImage})`;
 }
