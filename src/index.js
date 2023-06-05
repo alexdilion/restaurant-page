@@ -2,6 +2,7 @@ import initialLoad from "./modules/initialLoad";
 import pageLoad from "./modules/pageLoad";
 
 const PAGE_TABS = document.querySelectorAll(".page-tab a");
+const BACKGROUND_WRAPPER = document.querySelector(".background-wrapper")
 let currentTab = "home";
 
 function styleTab(selected) {

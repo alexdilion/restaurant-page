@@ -1,12 +1,12 @@
 :root {
-    --text-color: #333;
-    --accent: #7F5539;
+    --text-color: #ede0d4;
+    --accent: #7f5539;
 }
 
 @media screen and (min-width: calc(3rem + 1200px)) {
     .navbar,
-    #content {
-        width: 1200px
+    main#content {
+        width: 1200px;
     }
 }
 
@@ -20,17 +20,43 @@ body {
     margin: 0;
     color: var(--text-color);
     min-height: 100vh;
+    position: relative;
+}
 
+.page-container {
     display: grid;
     grid-template: max-content 1fr max-content / minmax(1.5rem, 1fr) auto minmax(1.5rem, 1fr);
     grid-template-areas:
         "lside navbar rside"
         "lside main-content rside"
         "lside footer rside";
+    position: relative;
+    z-index: 1;
+}
+
+.background-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+    filter: brightness(30%);
+    transition: filter 1s cubic-bezier(0.39, 0.58, 0.12, 1.03);
+}
+
+.page-background {
+    object-fit: cover;
+    background-position-x: 50%;
+    
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+    transform: scale(1.1);
 }
 
 .navbar {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     grid-area: navbar;
@@ -39,6 +65,7 @@ body {
 
 #content {
     grid-area: main-content;
+    width: calc(100vw - 3rem);
 }
 
 footer {
@@ -64,10 +91,6 @@ footer {
     font-size: 1.25rem;
 }
 
-.page-background {
-    width: 100%;
-}
-
 .page-tab a {
     text-decoration: none;
     color: inherit;
@@ -81,4 +104,8 @@ footer {
 .selected-tab {
     color: var(--accent);
     font-weight: 900;
+}
+
+.fade-out {
+    filter: brightness(0%);
 }
