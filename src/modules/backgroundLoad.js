@@ -5,7 +5,6 @@ import contactBackground from "../images/contactBackground.jpg";
 const PAGE_BACKGROUND = document.querySelector(".page-background");
 
 export default function backgroundLoad(page) {
-    console.log("Working");
     switch (page) {
         case "home":
             PAGE_BACKGROUND.style.backgroundImage = `url(${homeBackground})`;

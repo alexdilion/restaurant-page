@@ -5,15 +5,15 @@ export default function loadHome() {
 
     const header = document.createElement("h2");
     header.classList.add("page-header");
-    header.textContent = "Welcome to The Coffee Hut";
+    header.textContent = "Welcome to The Coffee Hut!";
     content.appendChild(header);
 
     const introduction = document.createElement("p");
     introduction.classList.add("page-text");
-    introduction.textContent =
-        "Step into our cozy sanctuary and immerse yourself in the rich aromas, flavorful blends, and warm ambiance that make us your go-to coffee haven. Indulge in the perfect cup that will awaken your senses and leave you craving for more. Join us at Coffee Hut, where every sip is a delightful journey to coffee paradise.";
+    introduction.innerHTML =
+        "Step into our cozy café and let the aroma of freshly brewed coffee embrace you. Our friendly team is here to serve you exceptional coffee, crafted with care and passion. Take a moment to unwind, savor the flavors, and create cherished memories in our welcoming space.";
     content.appendChild(introduction);
-
+    
     const buttonContainer = document.createElement("div");
     buttonContainer.classList.add("button-container");
     content.appendChild(buttonContainer);
