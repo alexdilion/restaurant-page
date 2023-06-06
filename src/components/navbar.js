@@ -1,11 +1,7 @@
 import logo from "../images/logo.png";
 
 export default function loadNavBar() {
-    const pageContainer = document.querySelector(".page-container");
-
-    const navContainer = document.createElement("nav");
-    navContainer.classList.add("navbar");
-    pageContainer.appendChild(navContainer);
+    const navContainer = document.querySelector(".navbar");
 
     const logoText = document.createElement("h1");
     logoText.classList.add("logo-text", "fancy-font");

@@ -11,7 +11,7 @@
     },
     "rules": {
         "no-console": "off",
-        "quotes": ["warn", "double"],
+        "quotes": ["off", "double"],
         "no-unused-vars": "warn"
     }
 }
