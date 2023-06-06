@@ -1,9 +1,10 @@
 export default function loadContact() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
+    content.setAttribute("class", "contact-container")
 
     const header = document.createElement("h2");
-    header.classList.add("page-header");
+    header.classList.add("page-header", "fancy-font");
     header.textContent = "Contact us";
     content.appendChild(header);
 
@@ -24,7 +25,7 @@ export default function loadContact() {
     contactList.appendChild(phoneInfo)
 
     const addressInfo = document.createElement("li");
-    addressInfo.textContent = "123, A Random Street, Randomville, Randomland";
+    addressInfo.textContent = "123, Random Street, Randomville, Randomland";
     contactList.appendChild(addressInfo)
 
     content.appendChild(contactList)

@@ -38,9 +38,10 @@ const MENU_ITEMS = {
 export default function loadMenu() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
+    content.setAttribute("class", "menu-container")
 
     const header = document.createElement("h2");
-    header.classList.add("page-header");
+    header.classList.add("page-header", "fancy-font");
     header.textContent = "Our Menu";
     content.appendChild(header);
 
