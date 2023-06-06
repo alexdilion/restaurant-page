@@ -1,6 +1,7 @@
 import initialLoad from "./modules/initialLoad";
 import pageLoad from "./modules/pageLoad";
 import backgroundLoad from "./modules/backgroundLoad";
+import "./style/style.css";
 
 let pageTabs = document.querySelectorAll(".page-tab a, .tab-button");
 const BACKGROUND_WRAPPER = document.querySelector(".background-wrapper");

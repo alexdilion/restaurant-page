@@ -60,7 +60,7 @@ body {
 }
 
 .navbar {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     grid-area: navbar;
@@ -112,6 +112,26 @@ body {
 
 footer {
     grid-area: footer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+footer a::after {
+    content: url("../images/external-link.svg");
+    fill: currentColor;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer img {
+    height: 32px;
 }
 
 .fancy-font {
