@@ -1,6 +1,7 @@
 :root {
     --text-color: #ede0d4;
     --accent: #7f5539;
+    --secondary: #656d4a;
 }
 
 @media screen and (min-width: calc(3rem + 1200px)) {
@@ -21,6 +22,7 @@ body {
     color: var(--text-color);
     min-height: 100vh;
     position: relative;
+    background-color: black;
 }
 
 .page-container {
@@ -69,6 +71,44 @@ body {
 #content {
     grid-area: main-content;
     width: calc(100vw - 3rem);
+    font-size: 1.25rem;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-container .page-header {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.home-container .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tab-button {
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    transition: border .2s ease-out;
+}
+
+.tab-button:hover {
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+}
+
+.home-container p {
+    margin: 2rem 0;
 }
 
 footer {
@@ -102,6 +142,14 @@ footer {
 .accent-text {
     font-family: inherit;
     color: var(--accent);
+}
+
+.accent-background {
+    background-color: var(--accent);
+}
+
+.secondary-background {
+    background-color: var(--secondary);
 }
 
 .selected-tab {
