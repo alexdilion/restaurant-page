@@ -21,18 +21,16 @@ function styleTab(selected) {
 
 function setDotOffset() {
     const root = document.querySelector(":root");
-
     const homeTabPosition = document.querySelector(".page-tab a[data-tab='home']").getBoundingClientRect();
     const currentTabPosition = document.querySelector(`.page-tab a[data-tab="${currentTab}"]`).getBoundingClientRect();
 
     if (currentTab === "home") {
         root.style.setProperty("--dot-offset", `${homeTabPosition.width / 2}px`);
-        return
+        return;
     }
 
-    const distance = currentTabPosition.x - homeTabPosition.x;
-    console.log(getComputedStyle(root).getPropertyValue("--dot-offset"));
-    root.style.setProperty("--dot-offset", `${distance + currentTabPosition.width / 2}px`);
+    const offset = currentTabPosition.x + (currentTabPosition.width / 2) - homeTabPosition.x;
+    root.style.setProperty("--dot-offset", `${offset}px`);
 }
 
 function switchTab(e) {

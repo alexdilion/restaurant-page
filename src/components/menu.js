@@ -41,7 +41,7 @@ export default function loadMenu() {
     content.setAttribute("class", "menu-container")
 
     const header = document.createElement("h2");
-    header.classList.add("page-header", "fancy-font");
+    header.classList.add("page-header");
     header.textContent = "Our Menu";
     content.appendChild(header);
 
@@ -56,7 +56,7 @@ export default function loadMenu() {
 
         MENU_ITEMS[itemType].forEach((item) => {
             const itemElement = document.createElement("li");
-            itemElement.textContent = `${item.name} - ${item.price}`;
+            itemElement.innerHTML = `${item.name} <span class="li-separator"></span> ${item.price}`;
 
             itemsList.appendChild(itemElement);
         });

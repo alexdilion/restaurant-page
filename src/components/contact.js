@@ -4,7 +4,7 @@ export default function loadContact() {
     content.setAttribute("class", "contact-container")
 
     const header = document.createElement("h2");
-    header.classList.add("page-header", "fancy-font");
+    header.classList.add("page-header");
     header.textContent = "Contact us";
     content.appendChild(header);
 

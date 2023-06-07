@@ -46,14 +46,14 @@ body {
     width: 100vw;
 
     filter: brightness(30%);
-    transition: filter .6s ease-in-out;
+    transition: filter 0.6s ease-in-out;
 }
 
 .page-background {
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-size: cover;
-    
+
     width: 100%;
     height: 100%;
     filter: blur(4px);
@@ -80,7 +80,7 @@ body {
     justify-content: center;
 }
 
-.home-container .page-header {
+.page-header {
     font-size: 3rem;
     text-align: center;
 }
@@ -92,14 +92,14 @@ body {
 }
 
 .tab-button {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid transparent;
     border-radius: 1rem;
     color: var(--text-color);
     font-weight: 600;
     font-size: 1.25rem;
 
-    transition: border .2s ease-out;
+    transition: border 0.2s ease-out;
 }
 
 .tab-button:hover {
@@ -111,13 +111,49 @@ body {
     margin: 2rem 2rem 3rem;
 }
 
+.menu-container {
+    padding: 0 2rem;
+}
+
+.menu-container .page-header {
+    margin-top: 3rem;
+}
+
+.menu-container ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.menu-container ul:not(ul:nth-last-of-type(1)) {
+    margin-bottom: 2rem;
+}
+
+.menu-container ul:nth-last-of-type(1) {
+    margin-bottom: 3rem;
+}
+
+.menu-container li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.menu-container li > span {
+    border-top: 1px dashed #ede0d4;
+    flex-grow: 1;
+    position: relative;
+    top: 1px;
+}
+
 footer {
     grid-area: footer;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 footer a::after {
@@ -130,7 +166,7 @@ footer a::after {
 footer a {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 footer img {
@@ -157,14 +193,15 @@ footer img {
     height: 48px;
 }
 
-.page-tab {
+.page-tab a {
     font-size: 1.25rem;
-    transition: color .4s ease-out;
+    transition: color 0.33s ease-out;
     letter-spacing: 1px;
     font-variant: small-caps;
 }
 
-.page-tab:hover {
+.page-tab a:hover,
+.page-tab a:focus-visible {
     color: var(--accent);
 }
 
@@ -182,7 +219,7 @@ footer img {
     bottom: -6px;
     left: var(--dot-offset);
     transform: translateX(-50%);
-    transition: left .4s ease-in-out;
+    transition: left 0.33s ease-in-out;
 }
 
 a {

@@ -19,17 +19,17 @@ export default function loadNavBar() {
     navContainer.appendChild(tabContainer);
 
     const homeTab = document.createElement("li");
-    homeTab.innerHTML = '<a href="" data-tab="home">Home</a>';
+    homeTab.innerHTML = '<a href="" data-tab="home" tabindex="0">Home</a>';
     homeTab.classList.add("page-tab", "selected-tab");
     tabContainer.appendChild(homeTab);
 
     const menuTab = document.createElement("li");
-    menuTab.innerHTML = '<a href="" data-tab="menu">Menu</a>';
+    menuTab.innerHTML = '<a href="" data-tab="menu" tabindex="1">Menu</a>';
     menuTab.classList.add("page-tab");
     tabContainer.appendChild(menuTab);
 
     const contactTab = document.createElement("li");
-    contactTab.innerHTML = '<a href="" data-tab="contact">Contact</a>';
+    contactTab.innerHTML = '<a href="" data-tab="contact" tabindex="2">Contact</a>';
     contactTab.classList.add("page-tab");
     tabContainer.appendChild(contactTab);
 }
