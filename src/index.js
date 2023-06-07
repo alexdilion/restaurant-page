@@ -25,7 +25,7 @@ function setDotOffset() {
     const currentTabPosition = document.querySelector(`.page-tab a[data-tab="${currentTab}"]`).getBoundingClientRect();
 
     if (currentTab === "home") {
-        root.style.setProperty("--dot-offset", `${homeTabPosition.width / 2}px`);
+        root.style.setProperty("--dot-offset", "50%");
         return;
     }
 

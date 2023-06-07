@@ -13,19 +13,19 @@ export default function loadContact() {
         "We'd love to hear from you! At Coffee Hut, your satisfaction is our top priority. If you have any questions, suggestions, or feedback, please reach out to us through the following channels:";
     content.append(contactText);
 
-    const contactList = document.createElement("p");
+    const contactList = document.createElement("ul");
     contactList.classList.add("contact-list");
     
     const emailInfo = document.createElement("li");
-    emailInfo.textContent = "feedback@coffeehut.com";
+    emailInfo.textContent = "Email: feedback@coffeehut.com";
     contactList.appendChild(emailInfo)
 
     const phoneInfo = document.createElement("li");
-    phoneInfo.textContent = "012 345 6789";
+    phoneInfo.textContent = "Phone: 012 345 6789";
     contactList.appendChild(phoneInfo)
 
     const addressInfo = document.createElement("li");
-    addressInfo.textContent = "123, Random Street, Randomville, Randomland";
+    addressInfo.textContent = "Address: 123, Random Street, Randomville, Randomland";
     contactList.appendChild(addressInfo)
 
     content.appendChild(contactList)

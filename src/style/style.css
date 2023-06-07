@@ -72,9 +72,11 @@ body {
     grid-area: main-content;
     width: calc(100vw - 3rem);
     font-size: 1.25rem;
+    padding: 0 3rem;
 }
 
-.home-container {
+.home-container,
+.contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,18 +110,14 @@ body {
 }
 
 .home-container p {
-    margin: 2rem 2rem 3rem;
-}
-
-.menu-container {
-    padding: 0 2rem;
+    margin: 3rem 0;
 }
 
 .menu-container .page-header {
     margin-top: 3rem;
 }
 
-.menu-container ul {
+ul {
     padding-left: 0;
     list-style: none;
 }
@@ -145,6 +143,19 @@ body {
     flex-grow: 1;
     position: relative;
     top: 1px;
+}
+
+.contact-container p {
+    margin: 3rem 0;
+}
+
+.contact-list {
+    width: max-content;
+    align-self: center;
+}
+
+.contact-list li {
+    width: fit-content;
 }
 
 footer {
