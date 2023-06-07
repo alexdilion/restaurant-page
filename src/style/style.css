@@ -2,6 +2,7 @@
     --text-color: #ede0d4;
     --accent: #986b54;
     --secondary: #656d4a;
+    --dot-offset: 50%;
 }
 
 @media screen and (min-width: calc(3rem + 1200px)) {
@@ -122,6 +123,8 @@ footer {
 footer a::after {
     content: url("../images/external-link.svg");
     fill: currentColor;
+    position: relative;
+    top: 2px;
 }
 
 footer a {
@@ -143,6 +146,7 @@ footer img {
     list-style: none;
     gap: 1em;
     align-items: center;
+    padding-left: 0;
 }
 
 .logo-text {
@@ -155,6 +159,30 @@ footer img {
 
 .page-tab {
     font-size: 1.25rem;
+    transition: color .4s ease-out;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+}
+
+.page-tab:hover {
+    color: var(--accent);
+}
+
+.nav-tabs li:first-child {
+    position: relative;
+}
+
+.nav-tabs li:first-child::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    background-color: var(--accent);
+    border-radius: 999px;
+    bottom: -6px;
+    left: var(--dot-offset);
+    transform: translateX(-50%);
+    transition: left .4s ease-in-out;
 }
 
 a {
@@ -177,7 +205,6 @@ a {
 
 .selected-tab {
     color: var(--accent);
-    font-weight: 900;
 }
 
 .fade-out {

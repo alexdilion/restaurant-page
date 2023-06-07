@@ -19,6 +19,22 @@ function styleTab(selected) {
     });
 }
 
+function setDotOffset() {
+    const root = document.querySelector(":root");
+
+    const homeTabPosition = document.querySelector(".page-tab a[data-tab='home']").getBoundingClientRect();
+    const currentTabPosition = document.querySelector(`.page-tab a[data-tab="${currentTab}"]`).getBoundingClientRect();
+
+    if (currentTab === "home") {
+        root.style.setProperty("--dot-offset", `${homeTabPosition.width / 2}px`);
+        return
+    }
+
+    const distance = currentTabPosition.x - homeTabPosition.x;
+    console.log(getComputedStyle(root).getPropertyValue("--dot-offset"));
+    root.style.setProperty("--dot-offset", `${distance + currentTabPosition.width / 2}px`);
+}
+
 function switchTab(e) {
     if (e.target.nodeName === "A") e.preventDefault();
 
@@ -38,6 +54,7 @@ function switchTab(e) {
     }
 
     currentTab = tab;
+    setDotOffset();
 }
 
 initialLoad();
